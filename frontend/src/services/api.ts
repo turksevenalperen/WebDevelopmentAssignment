@@ -1,6 +1,6 @@
 
 
-const API_BASE_URL = 'http://localhost:3000'
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://webdevelopmentassignment-production.up.railway.app'
 
 
 export type ApiResponse<T> = {
