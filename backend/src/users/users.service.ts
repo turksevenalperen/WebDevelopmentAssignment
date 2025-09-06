@@ -14,33 +14,33 @@ export class UsersService {
   private users: User[] = [
     {
       id: 1,
-      name: 'Leanne Graham',
-      username: 'Bret',
-      email: 'Sincere@april.biz',
+      name: 'Ahmet Yılmaz',
+      username: 'ahmetyilmaz',
+      email: 'ahmet.yilmaz@hotmail.com',
     },
     {
       id: 2,
-      name: 'Ervin Howell',
-      username: 'Antonette',
-      email: 'Shanna@melissa.tv',
+      name: 'Ayşe Demir',
+      username: 'aysedemir',
+      email: 'ayse.demir@gmail.com',
     },
     {
       id: 3,
-      name: 'Clementine Bauch',
-      username: 'Samantha',
-      email: 'Nathan@yesenia.net',
+      name: 'Mehmet Kaya',
+      username: 'mehmetkaya',
+      email: 'mehmet.kaya@outlook.com',
     },
     {
       id: 4,
-      name: 'Patricia Lebsack',
-      username: 'Karianne',
-      email: 'Julianne.OConner@kory.org',
+      name: 'Fatma Özkan',
+      username: 'fatmaozkan',
+      email: 'fatma.ozkan@yahoo.com',
     },
     {
       id: 5,
-      name: 'Chelsey Dietrich',
-      username: 'Kamren',
-      email: 'Lucio_Hettinger@annie.ca',
+      name: 'Emre Şahin',
+      username: 'emresahin',
+      email: 'emre.sahin@hotmail.com',
     },
   ];
 
