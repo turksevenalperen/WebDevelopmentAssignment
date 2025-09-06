@@ -1,0 +1,317 @@
+# Web Geliştirme Ödevi - Full Stack CRUD Uygulaması
+
+Modern teknolojiler kullanılarak geliştirilmiş tam yığın (full-stack) web uygulaması. Kullanıcı ve gönderi yönetimi için kapsamlı CRUD işlemleri sunar.
+
+## 🏗️ Proje Mimarisi
+
+```
+WebDevelopmentAssignment/
+├── backend/                 # NestJS API Server
+│   ├── src/
+│   │   ├── users/          # Kullanıcı modülü
+│   │   ├── posts/          # Gönderi modülü
+│   │   └── main.ts         # Sunucu giriş noktası
+│   ├── package.json
+│   └── README.md           # Backend kurulum rehberi
+├── frontend/               # React TypeScript Client
+│   ├── src/
+│   │   ├── components/     # React komponentleri
+│   │   ├── services/       # API servis katmanı
+│   │   └── main.tsx        # Frontend giriş noktası
+│   ├── package.json
+│   └── README.md           # Frontend kurulum rehberi
+└── README.md               # Bu dosya (genel rehber)
+```
+
+## 🚀 Teknoloji Yığını
+
+### Backend
+- **NestJS** - Progressive Node.js framework
+- **TypeScript** - Tip güvenli backend geliştirme
+- **Express.js** - Web framework (NestJS altında)
+- **Class Validator** - DTO validation
+- **CORS** - Cross-origin resource sharing
+
+### Frontend
+- **React 19** - Modern React with hooks
+- **TypeScript** - Tip güvenli frontend geliştirme
+- **Vite** - Hızlı build aracı ve dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Router** - Client-side routing
+
+## 📋 Özellikler
+
+### ✅ Temel Özellikler
+- **Full Stack CRUD**: Kullanıcı ve gönderi için tam CRUD işlemleri
+- **RESTful API**: Standart HTTP metodları ile API endpoint'leri
+- **Responsive Design**: Mobil-first, tüm cihazlarda uyumlu
+- **TypeScript**: Hem frontend hem backend tamamen tiplenmiş
+- **Modern UI/UX**: Temiz tasarım, hover efektleri, yükleme durumları
+
+### ✅ İleri Özellikler
+- **Real-time Updates**: Backend değişiklikleri frontend'e anında yansır
+- **Form Validation**: Gerçek zamanlı doğrulama ve hata mesajları
+- **Error Handling**: Kapsamlı hata yönetimi ve kullanıcı bildirimleri
+- **User-Post Relationship**: Gönderileri yazara göre filtreleme
+- **Hot Reload**: Geliştirme sırasında otomatik yeniden yükleme
+
+## 🛠️ Hızlı Başlangıç
+
+> **💡 Not**: Her klasörde detaylı kurulum rehberleri mevcuttur:
+> - **Backend kurulumu**: `backend/README.md` dosyasını inceleyin
+> - **Frontend kurulumu**: `frontend/README.md` dosyasını inceleyin
+> - Bu bölüm hızlı başlangıç için özet bilgi içerir
+
+### Gereksinimler
+- **Node.js** v18.0.0+ - [nodejs.org](https://nodejs.org/)
+- **npm** v8.0.0+ (Node.js ile birlikte gelir)
+- **Git** (opsiyonel) - Proje klonlamak için
+- **Modern tarayıcı** (Chrome, Firefox, Safari, Edge)
+
+### Sistem Kontrolü
+```bash
+# Versiyonları kontrol edin
+node --version    # v18.0.0+
+npm --version     # 8.0.0+
+git --version     # 2.0.0+
+```
+
+## 📥 Projeyi Klonlama ve Kurulum
+
+### 1. Projeyi İndirin
+```bash
+# Git ile klonlama (önerilen)
+git clone https://github.com/turksevenalperen/WebDevelopmentAssignment.git
+cd WebDevelopmentAssignment
+
+# veya ZIP olarak indirip çıkarın
+# https://github.com/turksevenalperen/WebDevelopmentAssignment/archive/main.zip
+```
+
+### 2. Backend Kurulumu
+```bash
+# Backend dizinine geçin
+cd backend
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run start:dev
+```
+
+**Backend çıktısı:**
+```
+[Nest] Starting Nest application...
+[Nest] Nest application successfully started
+Server running on: http://localhost:3000
+```
+
+### 3. Frontend Kurulumu (Yeni Terminal)
+```bash
+# Ana dizine dönün ve frontend'e geçin
+cd ../frontend
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run dev
+```
+
+**Frontend çıktısı:**
+```
+VITE ready in 500 ms
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+```
+
+### 4. Uygulamayı Açın
+- **Frontend**: http://localhost:5173
+- **Backend API**: http://localhost:3000
+- **API Test**: http://localhost:3000/users
+
+## 🎯 Kullanım Rehberi
+
+### İlk Çalıştırma
+1. **Backend başlatın** (Terminal 1): `cd backend && npm run start:dev`
+2. **Frontend başlatın** (Terminal 2): `cd frontend && npm run dev`
+3. **Tarayıcıda açın**: http://localhost:5173
+4. **API'yi test edin**: http://localhost:3000/users
+
+### Ana Özellikler
+- **Anasayfa**: Kullanıcılar ve Gönderiler bölümlerine erişim
+- **Kullanıcı Yönetimi**: Kullanıcı listeleme, ekleme, düzenleme, silme
+- **Gönderi Yönetimi**: Gönderi listeleme, ekleme, düzenleme, silme
+- **Filtreleme**: Gönderileri yazara göre filtreleme
+- **Responsive**: Mobil ve masaüstü uyumlu arayüz
+
+## 📡 API Endpoint'leri
+
+### 👥 Kullanıcılar
+```bash
+GET    /users          # Tüm kullanıcıları listele
+GET    /users/:id      # Belirli kullanıcıyı getir
+POST   /users          # Yeni kullanıcı oluştur
+PUT    /users/:id      # Kullanıcıyı güncelle
+DELETE /users/:id      # Kullanıcıyı sil
+GET    /users/:id/posts # Kullanıcının gönderilerini getir
+```
+
+### 📝 Gönderiler
+```bash
+GET    /posts          # Tüm gönderileri listele
+GET    /posts/:id      # Belirli gönderiyi getir
+POST   /posts          # Yeni gönderi oluştur
+PUT    /posts/:id      # Gönderiyi güncelle
+DELETE /posts/:id      # Gönderiyi sil
+```
+
+## 🧪 API Testleri
+
+### Tarayıcıda Test
+```bash
+# Kullanıcıları görüntüle
+http://localhost:3000/users
+
+# Gönderileri görüntüle
+http://localhost:3000/posts
+```
+
+### cURL ile Test
+```bash
+# Kullanıcı listesi
+curl http://localhost:3000/users
+
+# Yeni kullanıcı oluştur
+curl -X POST http://localhost:3000/users \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Test User","username":"testuser","email":"test@example.com"}'
+
+# Yeni gönderi oluştur
+curl -X POST http://localhost:3000/posts \
+  -H "Content-Type: application/json" \
+  -d '{"title":"Test Post","body":"Bu bir test gönderisidir.","userId":1}'
+```
+
+## 🔧 Geliştirme Komutları
+
+### Backend Komutları
+```bash
+cd backend
+npm run start:dev     # Geliştirme modunda başlat
+npm run build         # Production build
+npm run start:prod    # Production modunda çalıştır
+npm run test          # Unit testleri çalıştır
+npm run lint          # ESLint kontrolü
+```
+
+### Frontend Komutları
+```bash
+cd frontend
+npm run dev           # Geliştirme sunucusu
+npm run build         # Production build
+npm run preview       # Build önizlemesi
+npm run lint          # ESLint kontrolü
+```
+
+## ⚠️ Yaygın Sorunlar ve Çözümleri
+
+### ❌ Port Çakışması
+```bash
+# Backend için (varsayılan: 3000)
+cd backend/src/main.ts
+# await app.listen(3001); // Port değiştir
+
+# Frontend için (varsayılan: 5173)
+npm run dev -- --port 3002
+```
+
+### ❌ CORS Hatası
+- Backend `main.ts` dosyasında CORS ayarlarını kontrol edin
+- Frontend URL'inin doğru olduğundan emin olun: `http://localhost:5173`
+
+### ❌ Bağımlılık Sorunları
+```bash
+# Her iki dizinde de:
+rm -rf node_modules package-lock.json
+npm install
+```
+
+### ❌ TypeScript Hataları
+```bash
+# Backend
+cd backend && npm run build
+
+# Frontend
+cd frontend && npx tsc --noEmit
+```
+
+## 📱 Responsive Tasarım
+
+- **Mobile First**: 320px+ ekranlar için optimize
+- **Tablet**: 768px+ için geliştirilmiş düzen
+- **Desktop**: 1024px+ için tam özellik seti
+- **Touch Friendly**: Büyük butonlar ve tıklama alanları
+
+## 🎨 UI/UX Özellikleri
+
+- **Modern Tasarım**: Temiz, minimal arayüz
+- **Consistent Colors**: Profesyonel mavi-gri tema
+- **Smooth Animations**: Yumuşak geçişler ve hover efektleri
+- **Loading States**: Kullanıcı dostu yükleme göstergeleri
+- **Error Handling**: Açık hata mesajları ve çözüm önerileri
+
+## 📈 Performans
+
+- **Fast Development**: Vite ile hızlı HMR
+- **Optimized Build**: Production için optimize edilmiş
+- **Minimal Bundle**: Sadece gerekli kod
+- **Efficient API**: RESTful design patterns
+
+## 🔐 Güvenlik
+
+- **CORS Protection**: Frontend-backend arasında güvenli iletişim
+- **Input Validation**: DTO validation ile veri doğrulama
+- **TypeScript**: Tip güvenliği ile runtime hataları önleme
+- **Error Boundaries**: Kontrollü hata yönetimi
+
+## 📚 Öğrenme Kaynakları
+
+### React & TypeScript
+- [React Documentation](https://react.dev)
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
+- [Vite Guide](https://vitejs.dev/guide/)
+
+### NestJS & Backend
+- [NestJS Documentation](https://docs.nestjs.com)
+- [Node.js Guides](https://nodejs.org/en/learn/)
+
+### CSS & Design
+- [Tailwind CSS](https://tailwindcss.com/docs)
+- [MDN Web Docs](https://developer.mozilla.org/)
+
+## 🤝 Katkıda Bulunma
+
+1. **Fork** edin
+2. **Feature branch** oluşturun: `git checkout -b feature/amazing-feature`
+3. **Commit** yapın: `git commit -m 'Add amazing feature'`
+4. **Push** edin: `git push origin feature/amazing-feature`
+5. **Pull Request** açın
+
+## 📞 Destek
+
+Sorun yaşıyorsanız:
+
+1. **GitHub Issues**: Hata bildirimi için
+2. **Documentation**: Backend ve Frontend README'leri inceleyin
+3. **Console Logs**: Tarayıcı geliştirici araçlarını kontrol edin
+4. **API Testing**: Postman veya cURL ile endpoint'leri test edin
+
+## 📄 Lisans
+
+Bu proje eğitim amaçlı geliştirilmiştir. MIT Lisansı altında dağıtılmaktadır.
+
+---
+
+**🚀 Geliştirme için hazır! İyi kodlamalar!**
