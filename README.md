@@ -109,8 +109,8 @@ Server running on: http://localhost:3000
 
 ### 3. Frontend Kurulumu (Yeni Terminal)
 ```bash
-# Ana dizine dönün ve frontend'e geçin
-cd ../frontend
+# Yeni bir terminal açın dosya dizisine gidin sonrasında 
+cd frontend
 
 # Bağımlılıkları yükleyin
 npm install
