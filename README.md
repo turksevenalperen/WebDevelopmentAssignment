@@ -3,6 +3,7 @@
 Modern teknolojiler kullanılarak geliştirilmiş tam yığın (full-stack) web uygulaması. Kullanıcı ve gönderi yönetimi için kapsamlı CRUD işlemleri sunar.
 
 ## 🏗️ Proje Mimarisi
+## Canlı  Demo : https://web-development-assignment-steel.vercel.app/
 
 ```
 WebDevelopmentAssignment/
@@ -277,37 +278,7 @@ npm run preview       # Build önizlemesi
 npm run lint          # ESLint kontrolü
 ```
 
-## ⚠️ Yaygın Sorunlar ve Çözümleri
 
-### ❌ Port Çakışması
-```bash
-# Backend için (varsayılan: 3000)
-cd backend/src/main.ts
-# await app.listen(3001); // Port değiştir
-
-# Frontend için (varsayılan: 5173)
-npm run dev -- --port 3002
-```
-
-### ❌ CORS Hatası
-- Backend `main.ts` dosyasında CORS ayarlarını kontrol edin
-- Frontend URL'inin doğru olduğundan emin olun: `http://localhost:5173`
-
-### ❌ Bağımlılık Sorunları
-```bash
-# Her iki dizinde de:
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### ❌ TypeScript Hataları
-```bash
-# Backend
-cd backend && npm run build
-
-# Frontend
-cd frontend && npx tsc --noEmit
-```
 
 ## 📱 Responsive Tasarım
 
@@ -338,42 +309,4 @@ cd frontend && npx tsc --noEmit
 - **TypeScript**: Tip güvenliği ile runtime hataları önleme
 - **Error Boundaries**: Kontrollü hata yönetimi
 
-## 📚 Öğrenme Kaynakları
 
-### React & TypeScript
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Guide](https://vitejs.dev/guide/)
-
-### NestJS & Backend
-- [NestJS Documentation](https://docs.nestjs.com)
-- [Node.js Guides](https://nodejs.org/en/learn/)
-
-### CSS & Design
-- [Tailwind CSS](https://tailwindcss.com/docs)
-- [MDN Web Docs](https://developer.mozilla.org/)
-
-## 🤝 Katkıda Bulunma
-
-1. **Fork** edin
-2. **Feature branch** oluşturun: `git checkout -b feature/amazing-feature`
-3. **Commit** yapın: `git commit -m 'Add amazing feature'`
-4. **Push** edin: `git push origin feature/amazing-feature`
-5. **Pull Request** açın
-
-## 📞 Destek
-
-Sorun yaşıyorsanız:
-
-1. **GitHub Issues**: Hata bildirimi için
-2. **Documentation**: Backend ve Frontend README'leri inceleyin
-3. **Console Logs**: Tarayıcı geliştirici araçlarını kontrol edin
-4. **API Testing**: Tarayıcı arayüzü ile endpoint'leri test edin
-
-## 📄 Lisans
-
-Bu proje eğitim amaçlı geliştirilmiştir. MIT Lisansı altında dağıtılmaktadır.
-
----
-
-**🚀 Geliştirme için hazır! İyi kodlamalar!**
